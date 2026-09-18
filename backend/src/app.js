@@ -1,5 +1,6 @@
 import express from 'express';
 import cors from 'cors';
+import usuarioRouters from './routes/usuarioRoutes.js';
 
 const app = express();
 
@@ -11,5 +12,7 @@ app.get('/', (req, res) => {
         mensagem: 'API Pesquisa Eleitoral funcionando!'
     });
 });
+
+app.use('/api/usuarios', usuarioRouters);
 
 export default app;
