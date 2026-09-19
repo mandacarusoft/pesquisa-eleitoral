@@ -27,6 +27,7 @@ export async function buscarPorId(id) {
         `,
         [id]
     );
+    return usuarios[0] || null;
 }
 
 export async function buscarPorEmail(email) {
@@ -35,4 +36,5 @@ export async function buscarPorEmail(email) {
         FROM usuarios
         WHERE email = ?`, [email]
     );
+    return usuarios[0] || null;
 }
