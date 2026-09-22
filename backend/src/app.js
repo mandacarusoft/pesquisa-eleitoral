@@ -3,6 +3,7 @@ import cors from 'cors';
 
 import usuarioRouters from './routes/usuarioRoutes.js';
 import authRoutes from './routes/authRoutes.js';
+import alternaticaRoutes from './routes/alternativaRoutes.js'
 
 
 const app = express();
@@ -19,6 +20,7 @@ app.get('/', (req, res) => {
 
 app.use('/api/usuarios', usuarioRouters);
 app.use('/api/auth', authRoutes);
+app.use('/api/alternaticas', alternaticaRoutes);
 
 
 export default app;
